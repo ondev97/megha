@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be4c187ca6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="{% static 'css/contact-only.css' %}">
+    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 950px)" href="{% static 'css/tablet.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Contact Us - MeGha Caring</title>
+
+    <script type="text/javascript">
+
+    </script>
+
+
+</head>
+<body>
+
+    <nav id="mobile-navbar">
+        <div class="mobile-container">
+            <img src="{% static 'megha-caring-logo.png' %}" alt="site-logo" class="logo">
+            <a href="#" class="navbar-toggle">
+                <!-- <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span> -->
+                <i id="ham-icon" class="fas fa-bars"></i>
+                
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li> <a href="/">HOME</a> </li>
+                    <li> <a href="testimonials">TESTIMONIALS</a> </li>
+                    <li> <a href="">CONTACT</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header">
+        <nav id="navbar">
+            <div class="container">
+                <img src="{% static 'megha-caring-logo.png' %}" alt="site-logo" class="logo">
+                <ul>
+                    <li> <a href="/">HOME</a> </li>
+                    <li> <a href="testimonials">TESTIMONIALS</a> </li>
+                    <li> <a href="" class="current">CONTACT</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="inside-container">
+            <div class="item">
+                <h1>CONTACT US</h1>
+                <p id="contact-us-address">MeGha Caring (Private) Ltd <br>
+                    Level 26<br>
+                    Echelon Square<br>
+                    World Trade Centre<br>
+                    Colombo 01<br>
+                    Sri Lanka<br><br>
+                    
+                    +94 1127 598 521<br><br>
+                    
+                    sales@meghacaring.com
+                </p>
+
+            </div>
+            <div class="item item2"></div>
+        </div>
+    </div>
+
+
+    <section class="store-locator">
+        <h1>STORE LOCATOR</h1>
+        <h3>Coming Soon...</h3>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search..." name="store-search">
+            <button>Search</button>
+        </div>
+        
+    </section>
+    
+    
+
+
+    <section class="message-now">
+        <div class="message-section">
+            <div class="message-grid">
+                <div class="message-form">
+                    <form  onsubmit="question('response'); return false">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="FULL NAME" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="contact" id="contact" placeholder="CONTACT NUMBER" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="e-mail" id="e-mail" placeholder="EMAIL ADDRESS">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" placeholder="MESSAGE" required></textarea>
+                        </div>
+                        <input class="submit-btn" type="submit" value="Send Message">
+                        <p id="response" style="color: white"> </p>
+                    </form>
+                </div>
+                <div class="message-steps">
+                        <h1>HAVE A QUESTION ?</h1>
+                        <h2>WE'D LOVE TO HELP</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-section">
+            <div class="footer-grid">
+                <div class="left-footer">
+                    <h2>Quick Links</h2>
+                    <a href="/">Home</a><br>
+                    <a href="testimonials">Testimonials</a><br>
+                    <a href="contact-us">Contact Us</a><br>
+                </div>
+                <div class="middle-footer">
+                    <h2>Legal</h2>
+                </div>
+                <div class="right-footer">
+                    <h4>MeGha Caring (Private) Ltd,</h4>
+                    Level 26, Echelon Square,<br>
+                    World Trade Centre, Colombo 01<br>
+                    Sri Lanka<br>
+                    +94 1127 598 521<br>
+                    sales@meghacaring.com<br>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="copyright">
+        <div class="copyright-section">
+            <div class="copyright-flex">
+                <div class="copy-item">
+                    Copyright © 2021 MeGha Caring
+                </div>
+                <div class="copy-item">
+                    Powered by CrowdLogin
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="gotop-btn"><i class="fas fa-chevron-up"></i></a>
+    <script src="{% static './main.js' %}"></script>
+
+</body>
+</html>

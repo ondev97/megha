@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be4c187ca6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="{% static 'css/mobile.css' %}">
+    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 950px)" href="{% static 'css/tablet.css' %}">
+    
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Testimonials - MeGha Caring</title>
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+<body>
+    <nav id="mobile-navbar">
+        <div class="mobile-container">
+            <img src="{% static 'megha-caring-logo.png' %}" alt="site-logo" class="logo">
+            <a href="#" class="navbar-toggle">
+                <!-- <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span> -->
+                <i id="ham-icon" class="fas fa-bars"></i>
+                
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li> <a href="/">HOME</a> </li>
+                    <li> <a href="">TESTIMONIALS</a> </li>
+                    <li> <a href="contact-us">CONTACT</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header">
+        <nav id="navbar">
+            <div class="container">
+                <img src="{% static 'megha-caring-logo.png' %}" alt="site-logo" class="logo">
+                <ul>
+                    <li> <a href="/">HOME</a> </li>
+                    <li> <a href="" class="current">TESTIMONIALS</a> </li>
+                    <li> <a href="contact-us">CONTACT</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="inside-container">
+            <div class="item">
+                <h1 id="fade-title">{{ sec_1.title }}</h1>
+                <p>{{ sec_1.description }}</p>
+                <a href="#order-now" class="btn">Order Now</a>
+
+            </div>
+            <div class="item item2"></div>
+        </div>
+    </div>
+    
+    
+    <section class="success-story-video">
+        <div class="success-section-video">
+            <div class="success-grid-video">
+                <div class="success-head-video">
+                    <h1>{{ sec_2.title }}</h1>
+                </div>
+                {% for video in videos %}
+                    <div class="success-video-left">
+                        <iframe width="560" height="315" src={{ video.url }} title="YouTube-video-player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="magha-testimonial">
+        <div class="testimonial-section">
+            <div class="testimonial-grid">
+                {% if test0 %}
+                    <div class="black-testimonial">
+                        <p> {{ test0.content|safe }} </p>
+                        <p class="gold-text"> {{ test0.address|safe }} </p>
+                    </div>
+                {% endif %}
+                {% if test1 %}
+                    <div class="white-testimonial">
+                        <p> {{ test1.content|safe }} </p>
+                        <p class="gold-text"> {{ test1.address|safe }} </p>
+                    </div>
+                {% endif %}
+                {% if test2 %}
+                    <div class="white-testimonial">
+                        <p> {{ test2.content|safe }} </p>
+                        <p class="gold-text"> {{ test2.address|safe }} </p>
+                    </div>
+                {% endif %}
+                {% if test3 %}
+                    <div class="black-testimonial">
+                        <p> {{ test3.content|safe }} </p>
+                        <p class="gold-text"> {{ test3.address|safe }} </p>
+                    </div>
+                {% endif %}
+                {% if test4 %}
+                    <div class="black-testimonial">
+                        <p> {{ test4.content|safe }} </p>
+                        <p class="gold-text"> {{ test4.address|safe }} </p>
+                    </div>
+                {% endif %}
+                {% if test5 %}
+                    <div class="white-testimonial">
+                        <p> {{ test5.content|safe }} </p>
+                        <p class="gold-text"> {{ test5.address|safe }} </p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="order-now" id="order-now">
+        <div class="order-section">
+            <div class="order-grid">
+                <div class="order-steps">
+                    <h1>ORDER NOW</h1>
+                    <p> <span>Step 01</span><br>Fill the form with correct answers & submit.</p>
+                    <p> <span>Step 02</span><br>One of our sales agents will contact you to confirm the order.</p>
+                    <p> <span>Step 03</span><br>We will dispatch your order.</p>
+                    <p> <span>Step 04</span><br>Pay the courier person upon the delivery.</p>
+
+                    <h4>Islandwide Cash on Delivery is Available</h4>
+                </div>
+                <div class="order-form">
+                    <form onsubmit="order('response'); return false">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="FULL NAME" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="contact" id="contact" placeholder="CONTACT NUMBER" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" placeholder="ADDRESS" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="qty" id="qty" placeholder="QUANITY">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="district" id="district" placeholder="DISTRICT">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="remarks" id="remarks" placeholder="REMARKS">
+                        </div>
+                        <input class="submit-btn" type="submit" value="Send Message">
+                        <p id="response" style="color: white"> </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-section">
+            <div class="footer-grid">
+                <div class="left-footer">
+                    <h2>Quick Links</h2>
+                    <a href="/">Home</a><br>
+                    <a href="testimonials">Testimonials</a><br>
+                    <a href="contact-us">Contact Us</a><br>
+                </div>
+                <div class="middle-footer">
+                    <h2>Legal</h2>
+                </div>
+                <div class="right-footer">
+                    <h4>MeGha Caring (Private) Ltd,</h4>
+                    Level 26, Echelon Square,<br>
+                    World Trade Centre, Colombo 01<br>
+                    Sri Lanka<br>
+                    +94 1127 598 521<br>
+                    sales@meghacaring.com<br>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="copyright">
+        <div class="copyright-section">
+            <div class="copyright-flex">
+                <div class="copy-item">
+                    Copyright © 2021 MeGha Caring
+                </div>
+                <div class="copy-item">
+                    Powered by CrowdLogin
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="gotop-btn"><i class="fas fa-chevron-up"></i></a>
+    <script src="{% static './main.js' %}"></script>
+    
+</body>
+</html>

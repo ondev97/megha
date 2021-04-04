@@ -1,0 +1,747 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/*=========================================== GLOBAL SETUP ==============================================*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/*=========================================== HEADER & INSIDE CONTAINER (FLEX) ==============================================*/
+
+.header > * {
+  z-index: 10;
+  position: relative;
+}
+
+.header {
+  background: url(../images/megha-caring-slider.png) no-repeat center
+    center/cover;
+  height: 655px;
+  width: auto;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.header .inside-container {
+  display: flex;
+  height: 500px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+
+  align-items: center;
+  text-align: justify;
+}
+
+.header .inside-container p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.7rem;
+  margin: 2rem 0;
+  padding: 0 0.5rem;
+}
+
+.header .inside-container h1 {
+  color: #ffcc00;
+  font-weight: 100;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+}
+
+#fade-title {
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  background: #ffcc00;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 150;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.btn:hover {
+  color: white;
+  transition: 0.4s all;
+}
+.item {
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+/*=========================================== NAVBAR (FLEX) ==============================================*/
+
+#navbar {
+  background-color: #0002;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#navbar .container ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar .container ul li a {
+  padding: 1.5rem;
+  margin: 0 0.25rem;
+  color: #ffcc00;
+}
+
+#navbar .container ul li a:hover {
+  color: white;
+  transition: 0.5s all;
+}
+
+#navbar .container {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-self: center;
+  margin: auto;
+  padding: 1rem 0.8rem;
+}
+
+#navbar .container .current {
+  color: white;
+}
+
+.logo {
+  max-width: 60px;
+}
+
+/*=========================================== FEATURED SECTION (GRID 6x2) ==============================================*/
+
+.sub-image img {
+  display: block;
+  margin: auto;
+}
+
+.sub-image {
+  padding: 1rem 0 0 0;
+}
+
+.sub-image p {
+  text-align: center;
+  color: #333333;
+}
+
+.bottom-text {
+  padding: 2.5rem 2.5rem;
+  text-align: justify;
+  line-height: 1.7rem;
+  color: #333333;
+}
+
+.main-image {
+  padding: 1rem 1rem;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.futured-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 6rem 0;
+  color: #333333;
+}
+
+.futured-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.futured-grid .main-image {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.futured-grid .bottom-text {
+  grid-column: 3 / span 6;
+}
+
+/*=========================================== SUCESS STORY SECTION (GRID 2x1) ==============================================*/
+
+.success-story {
+  background-color: black;
+}
+
+.success-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.success-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.success-grid .success-head {
+  grid-column: 1 / span 2;
+}
+
+.success-grid .success-bottom {
+  grid-column: 1 / span 2;
+}
+
+.success-head h1 {
+  color: #ffcc00;
+  text-align: center;
+  padding: 4rem 0;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.success-video {
+  margin: 0 auto auto 0;
+  position: relative;
+  width: 100%;
+
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.success-video iframe {
+  padding: 1rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.success-text {
+  text-align: justify;
+  padding: 0 2rem;
+  line-height: 1.7rem;
+  color: white;
+}
+
+.success-bottom {
+  margin: auto;
+  padding: 4rem 0;
+}
+
+/*=========================================== FAQ SECTION (WILL BE Done Later) ==============================================*/
+
+/*=========================================== ORDER SECTION (GRID) ==============================================*/
+
+.order-now {
+  background-color: black;
+  border-top: 1px solid white;
+}
+
+.order-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.order-steps {
+  padding: 0 0 0 1rem;
+}
+
+.order-steps h1 {
+  color: #ffcc00;
+  padding: 4rem 0 2rem 0;
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+
+.order-steps h4 {
+  color: #ffcc00;
+  padding: 2rem 0 2rem 0;
+}
+
+.order-steps p {
+  color: white;
+  margin: 2rem 0;
+  line-height: 1.5rem;
+}
+
+.order-steps p span {
+  color: #ffcc00;
+}
+
+.order-form {
+  color: white;
+  border: 3px solid #ffcc00;
+  border-radius: 15px;
+  margin: 4rem 0 4rem 8rem;
+  padding: 1.2rem 1rem;
+}
+
+.order-form .form-group input {
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.order-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+.submit-btn {
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  border: 0;
+}
+
+.submit-btn:hover {
+  background-color: black;
+  color: white;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/*=========================================== FOOTER SECTION (GRID) ==============================================*/
+
+.site-footer {
+  background-color: #ffcc00;
+  padding: 0 0 3.5rem 0;
+  border-top: 1px solid white;
+  color: #333333;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.left-footer h2 {
+  padding: 2rem 0;
+  font-weight: 100;
+}
+
+.left-footer a {
+  line-height: 1.7rem;
+  color: #333333;
+}
+
+.left-footer a:hover {
+  color: #0084d6;
+  transition: 0.5s all;
+}
+
+.middle-footer h2 {
+  padding: 2rem 0;
+  font-weight: 100;
+}
+
+.right-footer h4 {
+  padding: 2rem 0 0 0;
+  font-size: 1rem;
+}
+
+.right-footer {
+  line-height: 1.7rem;
+}
+
+.left-footer {
+  padding: 0 2rem;
+}
+
+/*=========================================== COPYRIGHT SECTION (FLEX) ==============================================*/
+
+.copyright {
+  padding: 2rem 2rem;
+}
+
+.copyright-section {
+  max-width: 1200px;
+  margin: auto;
+}
+.copyright-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*============================================ TESTIMONIAL PAGE ========================================================*/
+
+/*===============================================================================================================================================*/
+
+/*=========================================== SUCESS VIDEO SECTION (GRID) ==============================================*/
+
+.success-story-video {
+  padding: 2rem 0 4rem 0;
+}
+
+.success-section-video {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.success-grid-video {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.success-grid-video .success-head-video {
+  grid-column: 1 / span 2;
+}
+
+.success-head-video h1 {
+  text-align: center;
+  padding: 3rem 0;
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+
+.success-video-left {
+  position: relative;
+  width: 100%;
+
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.success-video-right {
+  position: relative;
+  width: 100%;
+
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.success-video-right iframe {
+  padding: 1rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.success-video-left iframe {
+  padding: 1rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*=========================================== TESIMONIAL SECTION (GRID) ==============================================*/
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.black-testimonial {
+  background-color: black;
+  color: white;
+  padding: 1.5em 1.5rem;
+  line-height: 1.7rem;
+}
+
+.white-testimonial {
+  padding: 1.5em 1.5rem;
+  line-height: 1.7rem;
+}
+
+.testimonial-grid .gold-text {
+  color: #ffcc00;
+}
+
+/*============================================ CONTACT US PAGE ========================================================*/
+
+/*===============================================================================================================================================*/
+
+/*=========================================== HEADER CONTACT ADDRESS ==============================================*/
+
+#contact-us-address {
+  line-height: 1rem;
+}
+
+/*=========================================== STORE LOCATION SECTION ==============================================*/
+
+.store-locator {
+  max-width: 1200px;
+  margin: auto;
+  padding: 6rem 1rem;
+}
+
+.store-locator h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.store-locator h3 {
+  font-weight: 100;
+  padding: 1.5rem 0;
+}
+
+.search-box input {
+  padding: 0.7rem 0.5rem;
+  border: 1px solid #eaeaea;
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+.search-box button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-box button:hover {
+  background-color: black;
+  color: white;
+}
+
+/*=========================================== MESSAGE NOW SECTION (WILL BE GRID) ==============================================*/
+
+.message-now {
+  background-color: black;
+  border-top: 1px solid white;
+}
+
+.message-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.message-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.message-steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message-steps h1 {
+  color: #ffcc00;
+  font-weight: 100;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.message-steps h2 {
+  color: white;
+  font-weight: 100;
+  font-size: 1.8rem;
+  padding: 1rem 8rem 1rem 0;
+  text-align: center;
+}
+
+.message-form {
+  color: white;
+  border: 3px solid #ffcc00;
+  border-radius: 15px;
+  margin: 4rem 8rem 4rem 0rem;
+  padding: 1.2rem 1rem;
+}
+
+.message-form .form-group input {
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.message-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+.submit-btn {
+  padding: 0.75rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+/*=========================================== GO TOP BUTTON (COMMON) ==============================================*/
+
+.gotop-btn {
+  position: fixed;
+  display: none;
+  width: 31px;
+  height: 31px;
+  background: #3e3e3e;
+  bottom: 30px;
+  right: 30px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+  color: #dadada;
+  border-radius: 2px;
+}
+
+/*================================================ FAQ SECTION ===================================================*/
+
+.faq-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.acordion {
+  margin: 5rem auto;
+}
+
+.faq-section h1 {
+  padding: 0 0 3.5rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.acordion-item {
+}
+
+.acordion-item-header {
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.b-bottom {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.fade-boder {
+}
+
+.acordion-item-header::before {
+  content: "\25BA";
+  padding: 0 0.5rem 0 0;
+}
+
+.acordion-item-header.active::before {
+  content: "\25B2";
+  padding: 0 0.5rem 0 0;
+}
+
+.acordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s;
+}
+
+.acordion-item-body-content {
+  padding: 1.5rem 1rem 2rem 1.2rem;
+  line-height: 1.5rem;
+  border-bottom: 1px solid #d4d4d4;
+  color: #333333;
+  font-size: 1rem;
+}
+
+.acordion-item-header.active + .acordion-item-body {
+  max-height: 100px;
+}
+
+/* ================================================UNDER HEAVY TESTING (MOBILE NAVBAR)========================================= */
+#mobile-navbar {
+  display: none;
+}
+
+.mobile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 1rem;
+}
+
+.mobile-container ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.mobile-container ul li {
+  list-style: none;
+}
+
+.mobile-container ul li a {
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-container a i {
+  color: #c4c4c4;
+  background-color: #54595f;
+  padding: 0.8rem 0.8rem;
+  border-radius: 2px;
+}
