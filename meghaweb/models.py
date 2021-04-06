@@ -1,6 +1,6 @@
-from django.contrib import admin
 from django.db import models
 from ckeditor.fields import RichTextField
+
 
 # Create your models here.
 
@@ -14,6 +14,7 @@ class IndexSectionOne(models.Model):
     def __str__(self):
         return self.title
 
+
 class IndexSectionTwo(models.Model):
     class Meta:
         verbose_name_plural = 'Index Section Two'
@@ -24,6 +25,7 @@ class IndexSectionTwo(models.Model):
     def __str__(self):
         return self.description
 
+
 class MediumImage(models.Model):
     class Meta:
         verbose_name_plural = 'Medium Images'
@@ -33,6 +35,7 @@ class MediumImage(models.Model):
 
     def __str__(self):
         return self.dec
+
 
 class IndexSectionThree(models.Model):
     class Meta:
@@ -45,6 +48,7 @@ class IndexSectionThree(models.Model):
     def __str__(self):
         return self.title
 
+
 class IndexSectionFour(models.Model):
     class Meta:
         verbose_name_plural = 'Index Section Four'
@@ -53,6 +57,7 @@ class IndexSectionFour(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Questions(models.Model):
     class Meta:
@@ -64,6 +69,7 @@ class Questions(models.Model):
     def __str__(self):
         return self.ques
 
+
 class OrderSection(models.Model):
     class Meta:
         verbose_name_plural = 'Order Section'
@@ -73,6 +79,7 @@ class OrderSection(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class OrderStep(models.Model):
     class Meta:
@@ -84,6 +91,7 @@ class OrderStep(models.Model):
     def __str__(self):
         return self.title
 
+
 class TestimonialsSectionOne(models.Model):
     class Meta:
         verbose_name_plural = 'Testimonials Section One'
@@ -94,6 +102,7 @@ class TestimonialsSectionOne(models.Model):
     def __str__(self):
         return self.title
 
+
 class TestimonialsSectionTwo(models.Model):
     class Meta:
         verbose_name_plural = 'Testimonials Section Two'
@@ -103,6 +112,7 @@ class TestimonialsSectionTwo(models.Model):
     def __str__(self):
         return self.title
 
+
 class Video(models.Model):
     class Meta:
         verbose_name_plural = 'Videos'
@@ -111,6 +121,7 @@ class Video(models.Model):
 
     def __str__(self):
         return self.url
+
 
 class Testimonial(models.Model):
     class Meta:
