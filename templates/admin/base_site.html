@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+
+    {% block extrastyle %}
+        <link href="{% static 'css/admin_style.css' %}" rel="stylesheet" type="text/css" media="screen,projection" />
+    {% endblock %}
+
+    <h1 id="head">
+        <a href="{% url 'admin:index' %}">
+            <img src="{% static 'megha-caring-logo.png' %}" height="40px" /> Megha Caring Admin Panel
+        </a>
+    </h1>
+{% endblock %}
+
+{#{% block extrastyle %}#}
+{#<link href="{{ STATIC_URL }}css/adminextra.css" rel="stylesheet" type="text/css" media="screen,projection" />#}
+{#{% endblock %}#}
+
+{% block nav-global %}{% endblock %}

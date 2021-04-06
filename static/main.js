@@ -62,6 +62,8 @@ function order(id){
             csrfmiddlewaretoken : $('input[name=csrfmiddlewaretoken]').val()
         },
         success : function (response){
+            document.getElementById("qty").value = "";
+            document.getElementById("remarks").value = "";
             document.getElementById(id).style.color = "green";
             document.getElementById(id).innerHTML = response.message;
             document.getElementById(id).style.border = "2px solid green";
@@ -90,6 +92,7 @@ function question(id){
             csrfmiddlewaretoken : $('input[name=csrfmiddlewaretoken]').val()
         },
         success : function (response){
+            document.getElementById("message").value = "";
             document.getElementById(id).style.color = "green";
             document.getElementById(id).innerHTML = response.message;
             document.getElementById(id).style.border = "2px solid green";

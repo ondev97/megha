@@ -1,0 +1,299 @@
+#navbar {
+  display: none;
+}
+
+/* ================================================UNDER HEAVY TESTING (MOBILE NAVBAR)========================================= */
+
+#mobile-navbar {
+  display: block;
+}
+
+.navbar-toggle {
+  display: flex;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.mobile-container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mobile-container ul {
+  flex-direction: column;
+  width: 100%;
+}
+
+.mobile-container ul li {
+  padding: 0rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.mobile-container ul li a {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 0rem;
+  color: #4e4e4e;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+/*=========================================== HEADER & INSIDE CONTAINER (FLEX) ==============================================*/
+
+.header {
+  background: url(../images/megha-caring-slider.png) no-repeat center
+    center/cover;
+  height: 470px;
+  width: auto;
+}
+
+.header .inside-container p {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 1.4rem;
+  margin: 2rem 0;
+  padding: 0 3rem;
+}
+
+.header .inside-container h1 {
+  color: #ffcc00;
+  font-weight: 100;
+  font-size: 1.4rem;
+  padding: 0 3rem;
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  background: #ffcc00;
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 150;
+  margin: 0 3rem;
+}
+
+/*=========================================== FEATURED SECTION (GRID 6x2) ==============================================*/
+
+.sub-image img {
+  display: block;
+  margin: auto;
+}
+
+.sub-image {
+  padding: 1rem 0 0 0;
+}
+
+.sub-image p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.bottom-text {
+  padding: 2.5rem 2.5rem;
+  text-align: justify;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.main-image {
+  padding: 1rem 1rem;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.futured-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 6rem 0;
+}
+
+/*=========================================== SUCESS STORY SECTION (GRID 2x1) ==============================================*/
+
+.success-text {
+  text-align: justify;
+  padding: 0 2rem;
+  line-height: 1.6rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.success-head h1 {
+  font-size: 1.4rem;
+}
+
+/*================================================ FAQ SECTION ===================================================*/
+
+.faq-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.faq-section h1 {
+  padding: 0 0 3.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.acordion-item-header {
+  font-size: 0.8rem;
+  color: #333333;
+}
+
+.acordion-item-body-content {
+  font-size: 0.9rem;
+}
+
+/*=========================================== ORDER SECTION (GRID) ==============================================*/
+
+.order-steps {
+  padding: 0 0 0 1rem;
+}
+
+.order-steps h1 {
+  font-size: 1.2rem;
+}
+
+.order-steps h4 {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+.order-steps p {
+  color: white;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.order-form {
+  margin: 4rem 0 4rem 4rem;
+}
+
+.order-form .form-group input {
+  font-size: 0.9rem;
+}
+
+.order-form textarea {
+  font-size: 0.9rem;
+}
+
+/*=========================================== FOOTER SECTION (GRID) ==============================================*/
+
+.site-footer {
+  background-color: #ffcc00;
+  padding: 0 0 5rem 0;
+  border-top: 1px solid white;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.left-footer h2 {
+  padding: 2rem 0;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.left-footer a {
+  line-height: 1.7rem;
+  color: #333333;
+  font-size: 0.9rem;
+}
+
+.middle-footer h2 {
+  padding: 2rem 0;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.right-footer h4 {
+  padding: 2rem 0 0 0;
+}
+
+.right-footer {
+  line-height: 1.8rem;
+}
+
+.left-footer {
+  padding: 0 2rem;
+}
+
+.right-footer {
+}
+
+.middle-footer {
+}
+
+/*============================================ TESTIMONIAL PAGE ========================================================*/
+
+/*===============================================================================================================================================*/
+
+/*=========================================== SUCESS VIDEO SECTION (GRID) ==============================================*/
+
+.success-head-video h1 {
+  font-size: 1.3rem;
+}
+
+/*=========================================== TESIMONIAL SECTION (GRID) ==============================================*/
+
+.testimonial-grid {
+  font-size: 0.9rem;
+}
+
+/*=========================================== STORE LOCATION SECTION ==============================================*/
+
+.store-locator h1 {
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.store-locator h3 {
+  font-weight: 100;
+  font-size: 1.1rem;
+}
+
+/*=========================================== MESSAGE NOW SECTION (WILL BE GRID) ==============================================*/
+
+.message-form {
+  margin: 4rem 4rem 4rem 0rem;
+}
+
+.message-form .form-group input {
+  font-size: 0.9rem;
+}
+
+.message-steps h1 {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-align: left;
+  line-height: 0.5rem;
+}
+
+.message-steps h2 {
+  font-size: 1.2rem;
+  padding: 1rem 4rem 1rem 0;
+}
+
+.message-steps {
+  padding: 0 2rem;
+}
